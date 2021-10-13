@@ -27,10 +27,18 @@ ___
 
 `pip install awscli` 설치
 
-`aws configure` 입력 하여 `Access Key` 와 `Secret Access Key` 를 입력
+`aws configure` 입력 하여 `Access Key` 와 `Secret Access Key`
+`ap-northeast-2``json` 값을 입력
 
-aws 웹 접속하여 IAM 서비스 이용  
-그룹생성 AdministratorAccess 정책 연결하여 생성  
+키 값은 [AWS 사이트](https://aws.amazon.com/ko/?nc2=h_lg)에 접속하여 `IAM` 서비스 이용  
+그룹생성 `AdministratorAccess` 정책 연결하여 생성  
 사용자생성 엑세스 유형의 엑세스키 - 프로그래밍 방식 엑세스 체크하여 연결  
+
+`cat ~/.aws/credentials` Key 값 확인 가능  
+`cat ~/.aws/config` region , output 값 확인 가능
+
 ___
 
+### Front-end
+
+[머티리얼 디자인 라이트](https://getmdl.io/) 에 접속
