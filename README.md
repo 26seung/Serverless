@@ -5,6 +5,7 @@
 ___
 ### 환경설정 준비
 
+(docker 이미지를 통해 설정 연습)  
 터미널 켜서 `docker run -it amazonlinux bash` 입력 하여 bash환경 접속  
 내부 환경에 `python3` 가 설치 되어 있지 않으니 설치 진행  
   
@@ -36,6 +37,30 @@ ___
 
 `cat ~/.aws/credentials` Key 값 확인 가능  
 `cat ~/.aws/config` region , output 값 확인 가능
+
+___
+
+
+파이썬 3.3 버전 부터는 venv 이 기본 내장되어 있다고 해서 사용 해보려고 한다.  
+디렉토리 명은 임의로 설정하여도 되지만  `.venv` 가 관행이니 지키는게 좋다.
+
+```
+$ cd <프로젝트 디렉터리>
+$ python -m venv .venv
+$ ls
+.venv
+```
+가상 환경을 굳이 Git과 같은 소스 버전 관리 시스템에 올릴 필요는 없으므로 .venv 디렉터리를 .gitignore 파일에 추가해줍니다.  
+`echo '.venv' >> .gitignore`
+
+`bin/activate`를 실행하면 , 쉘 프롬프트 앞에 `(.venv)`라고 붙으면서 가상 환경이 활성화 된다. 
+```
+$ . .venv/bin/activate   
+or
+$ source .venv/bin/activate
+(.venv) $
+```
+
 
 ___
 
